@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## modules libs/sundials-2.7.0
+##
+## modulefiles/libs/sundials-2.7.0
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "libs/sundials-2.7.0"
+}
+
+module-whatis   "libs/sundials-2.7.0"
+
+# for Tcl script use only
+set     topdir          /opt/packages/sundials-2.7.0/bin
+set     version         2.7.0
+set     sys             linux86
+setenv	SUNDIALS_DIR	$topdir/lib
+setenv	SUNDIALS_INC	$topdir/include
+
+prepend-path    PATH            $topdir/include
+prepend-path    LD_LIBRARY_PATH $topdir/lib

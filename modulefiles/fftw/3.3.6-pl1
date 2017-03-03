@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## modules fftw/3.3.6-pl1
+##
+## modulefiles/fftw/3.3.6-pl1
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "fftw/3.3.6-pl1"
+}
+
+module-whatis   "fftw/3.3.6-pl1"
+
+# for Tcl script use only
+set     topdir          /opt/packages/fftw-3.3.6-pl1
+set     version         3.3.6-pl1
+set     sys             linux86
+setenv     FFTW_DIR        $topdir/lib
+setenv     FFTW_INC        $topdir/include
+
+prepend-path    PATH            $topdir/include
+prepend-path    PATH            $topdir/bin
+prepend-path    LD_LIBRARY_PATH $topdir/lib

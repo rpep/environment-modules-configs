@@ -1,21 +1,23 @@
 #%Module1.0#####################################################################
 ##
-## modules libs/sundials-2.7.0
+## modules fftw/3.3.5
 ##
-## modulefiles/libs/sundials-2.7.0
+## modulefiles/fftw/3.3.5
 ##
 proc ModulesHelp { } {
         global version modroot
 
-        puts stderr "libs/sundials-2.7.0"
+        puts stderr "fftw/3.3.5"
 }
 
-module-whatis   "libs/sundials-2.7.0"
+module-whatis   "fftw/3.3.5"
 
 # for Tcl script use only
-set     topdir          /opt/packages/sundials-2.7.0/
-set     version         2.7.0
+set     topdir          /opt/packages/fftw-3.3.5
+set     version         3.3.5
 set     sys             linux86
+setenv     FFTW_DIR        $topdir/lib
+setenv     FFTW_INC        $topdir/include
 
 prepend-path    PATH            $topdir/include
 prepend-path    PATH            $topdir/bin
