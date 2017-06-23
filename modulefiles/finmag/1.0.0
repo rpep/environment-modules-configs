@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## modules finmag/1.0.0
+##
+## modulefiles/finmag/1.0.0
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "finmag/1.0.0"
+}
+
+module-whatis   "finmag/1.0.0"
+
+# for Tcl script use only
+set     findir          /home/ryan/git/finmag/src
+set     skstabdir       /home/ryan/bigdata/sk_stability/src
+set     version         1.0.0
+set     sys             linux86
+
+prepend-path    PYTHONPATH      $skstabdir
+prepend-path    PYTHONPATH      $findir
