@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## modules cmakes/3.8.2
+##
+## modulefiles/libs/sundials-2.7.0
+##
+proc ModulesHelp { } {
+        global version modroot
+
+        puts stderr "cmake/3.8.2"
+}
+
+module-whatis   "cmake/3.8.2"
+
+# for Tcl script use only
+set     topdir          /opt/packages/cmake/3.8.2/
+set     version         3.8.2
+set     sys             linux86
+setenv  CMAKE_DIR       $topdir/bin
+
+prepend-path PATH       $topdir/bin
+
+
+
